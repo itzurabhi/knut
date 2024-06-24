@@ -130,6 +130,14 @@ add_custom_command(
           ${CMAKE_BINARY_DIR}/compile_commands.json compile_commands.json
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/test_data/projects/cpp-project)
 
+  add_custom_command(
+    OUTPUT
+      ${CMAKE_CURRENT_LIST_DIR}/test_data/projects/qml-project/compile_commands.json
+    COMMENT "Creating compile_commands.json file for qml-project"
+    COMMAND ${CMAKE_COMMAND} -E create_symlink
+            ${CMAKE_BINARY_DIR}/compile_commands.json compile_commands.json
+    WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/test_data/projects/qml-project)
+
 # Post-initialization
 # ##############################################################################
 # Need to be done *after* compiling 3rd parties

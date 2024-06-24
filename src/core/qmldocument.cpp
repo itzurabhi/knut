@@ -9,11 +9,12 @@
 */
 
 #include "qmldocument.h"
+#include "astnode.h"
 
 namespace Core {
 
 QmlDocument::QmlDocument(QObject *parent)
-    : TextDocument(Type::Qml, parent)
+    : CodeDocument(Type::Qml, parent)
 {
 }
 

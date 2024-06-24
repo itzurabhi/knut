@@ -10,11 +10,11 @@
 
 #pragma once
 
-#include "textdocument.h"
+#include "codedocument.h"
 
 namespace Core {
 
-class QmlDocument : public TextDocument
+class QmlDocument : public CodeDocument
 {
     Q_OBJECT
 
